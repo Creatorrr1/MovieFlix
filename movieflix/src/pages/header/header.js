@@ -12,18 +12,18 @@ function Header() {
 		<>
 			{/* <h1>hello</h1> */}
 			<header>
-				<div className='grid-in-grid2-use gap-sm'>
+				<div className="grid-in-grid2-use gap-sm">
 					{/* <button>Home</button> */}
 					<Link to="/" className="link">
-                		<div className="nav-text">Home</div>
-              		</Link>
+						<div className="nav-text">Home</div>
+					</Link>
 					<Link to="/browse" className="link">
-                		<div className="nav-text">Browse</div>
-              		</Link>
+						<div className="nav-text">Browse</div>
+					</Link>
 					{/* <button>Browse</button> */}
-				<form id="form">
-					<input type="text" id="search" placeholder="Search" className="search" />
-				</form>
+					<form id="form">
+						<input type="text" id="search" placeholder="Search" className="search" />
+					</form>
 				</div>
 			</header>
 		</>

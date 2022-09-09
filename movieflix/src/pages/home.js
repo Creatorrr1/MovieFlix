@@ -17,10 +17,14 @@ function Home() {
 			<div className="home-container">
 				<video src={cinemaVid} autoPlay loop muted id="autoplay" />
 				<div className="home-two-row-grid">
-					<h1 className='home-title'>MovieFlix</h1>
-					<div className="search-container">
+					<h1 className="home-title">MovieFlix</h1>
+					{/* <div className="search-container">
 						<input type="text" placeholder="Search..." />
 						<div className="search"></div>
+					</div> */}
+					<div className='main-search-container'>
+						<input type="text" placeholder="Search..." className='main-search'/>
+						{/* <div className="search"></div> */}
 					</div>
 				</div>
 			</div>
