@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #22254b;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+}
+
+header {
+	background-color: #373b69;
+	/* background-color: #4B0720; */
+	display: flex;
+	justify-content: flex-end;
+	padding: 1rem;
+}
+
+.search {
+	background-color: transparent;
+	border: 2px solid #22254b;
+	border-radius: 50px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+	color: #7378c5;
+}
+
+.search:focus {
+	background-color: #22254b;
+	outline: none;
+}
+
+.link {
+    text-decoration: none;
+    /* color: white; */
+    color: #8f92c3;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-top: 8px;
+  }
+
+  .gap-sm {
+    gap: 30px;
+  }
+
+/* Containers and grids to be used  START --------- */
+
+.three-column-grid-use {
+	display: grid;
+	grid-template-columns: minmax(900px,1fr) auto auto;
+	gap: 4px;
+}
+
+.grid-in-grid2-use {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	/* padding-bottom: 50px; */
+	/* height: 50px; */
+}
+
+/* Containers and grids to be used  END --------- */
+
+/* Containers ----------------------- */
+
+.container {
+	padding: 8px;
+}
+
+.three-column-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 4px;
+}
+
+.three-column-grid__expand-two {
+	display: grid;
+	grid-template-columns: 50px 1fr 50px;
+	gap: 4px;
+}
+
+.four-column-grid {
+	display: grid;
+	grid-template-columns: 250px 1fr 1fr 1fr;
+	gap: 4px;
+}
+
+.auto-column-grid-header {
+	display: grid;
+	grid-template-columns: 250px repeat(5, auto);
+	gap: 4px;
+}
+
+.five-column-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 4px;
+}
+
+.five-column-grid-header {
+	display: grid;
+	grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+	gap: 4px;
+}
+
+.center-grid {
+	/* padding-left: 500px;
+      padding-right: 500px; */
+	display: grid;
+	justify-content: center;
+}
+
+.centered {
+	width: 200px;
+}
+
+/* Grid within Grid Section */
+
+.two-column-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.two-column-grid__expand-two {
+	display: grid;
+	grid-template-columns: 90px 1fr;
+	gap: 4px;
+}
+
+.two-column-grid__expand-one {
+	display: grid;
+	grid-template-columns: 200px 50px;
+	gap: 10px;
+}
+
+.grid-in-grid2 {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	padding-bottom: 50px;
+	/* height: 50px; */
+}
+
+/* Containers ----------------------- */

@@ -10,6 +10,7 @@ body {
 
 header {
     background-color: #373b69;
+    /* background-color: #4B0720; */
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
