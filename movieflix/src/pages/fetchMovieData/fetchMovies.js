@@ -100,19 +100,19 @@ function GetMovies() {
 		//   });
 	}
     
-    // const findMovie = (e) => {
-    //     e.preventDefault()
-    //     const search = document.getElementById("search")
-    //     const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
+    const findMovie = (e) => {
+        e.preventDefault()
+        const search = document.getElementById("search")
+        const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
     
-    //     const searchTerm = search.value
+        const searchTerm = search.value
     
-    //     if (searchTerm) {
-    //         GetMovies.getMovies(SEARCHAPI + searchTerm)
+        if (searchTerm) {
+            GetMovies.getMovies(SEARCHAPI + searchTerm)
     
-    //         search.value = ""
-    //     }
-    // }
+            search.value = ""
+        }
+    }
 }
 const findMovie = (e) => {
     e.preventDefault()
@@ -127,5 +127,6 @@ const findMovie = (e) => {
         search.value = ""
     }
 }
+// {GetMovies, findMovie}
 
 module.exports = GetMovies
