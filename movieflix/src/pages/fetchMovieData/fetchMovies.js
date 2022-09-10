@@ -24,6 +24,7 @@ function GetMovies() {
     //   main.innerHTML = ""
     //   main = {__html: ""}
       document.getElementById("main").innerHTML = ""
+      const addToMain = document.getElementById("main")
   
       movies.forEach((movie) => {
         const { poster_path, title, vote_average, overview } = movie
@@ -46,7 +47,7 @@ function GetMovies() {
               </div>
           `
   
-        main.appendChild(movieEl)
+          addToMain.appendChild(movieEl)
       })
   
       function getClassByRate(vote) {
@@ -59,19 +60,31 @@ function GetMovies() {
           }
       }
       
-      form.addEventListener("submit", (e) => {
-          e.preventDefault();
+    //   form.addEventListener("submit", (e) => {
+    //       e.preventDefault();
       
-          const searchTerm = search.value;
+    //       const searchTerm = search.value;
       
-          if (searchTerm) {
-              getMovies(SEARCHAPI + searchTerm);
+    //       if (searchTerm) {
+    //           getMovies(SEARCHAPI + searchTerm);
       
-              search.value = "";
-          }
-      });
+    //           search.value = "";
+    //       }
+    //   });
     
     }
+    const findMovie = (e) => {
+        e.preventDefault();
+                
+        const searchTerm = search.value;
+        
+        if (searchTerm) {
+            getMovies(SEARCHAPI + searchTerm);
+            
+            search.value = "";
+        }
+    }
+    
 }
-
-module.exports = GetMovies
+    
+    module.exports = GetMovies

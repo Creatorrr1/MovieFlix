@@ -1,12 +1,12 @@
 import React from "react"
 import "./../App.css"
 // import "./css/browse.css"
-// import GetMovies from "../fetchMovieData/fetchMovies"
+import GetMovies from "./fetchMovieData/fetchMovies"
 import "./css/home.scss"
 import cinemaVid from "../videos/blue_cinema_screen_wide.mp4"
 
 function Home() {
-	// GetMovies()
+	GetMovies()
 
 	// window.onload = () => {
 	//     document.getElementById("autoplay").play()
@@ -23,7 +23,9 @@ function Home() {
 						<div className="search"></div>
 					</div> */}
 					<div className='main-search-container'>
-						<input type="text" placeholder="Search..." className='main-search'/>
+                        <form>
+						<input type="text" placeholder="Search..." className='main-search' onSubmit={GetMovies.findMovie}/>
+                        </form>
 						{/* <div className="search"></div> */}
 					</div>
 				</div>

@@ -22,7 +22,7 @@ function Header() {
 					</Link>
 					{/* <button>Browse</button> */}
 					<form id="form">
-						<input type="text" id="search" placeholder="Search" className="search" />
+						<input type="text" id="search" placeholder="Search" className="search" onSubmit={GetMovies.findMovie}/>
 					</form>
 				</div>
 			</header>
