@@ -24,7 +24,9 @@ function Home() {
 					</div> */}
 					<div className='main-search-container'>
                         <form>
-						<input type="text" placeholder="Search..." className='main-search' onSubmit={GetMovies.findMovie}/>
+						<input type="text" placeholder="Search..." className='main-search' 
+                        // onSubmit={GetMovies.findMovie}
+                        />
                         </form>
 						{/* <div className="search"></div> */}
 					</div>

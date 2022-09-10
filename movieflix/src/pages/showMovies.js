@@ -7,7 +7,9 @@ function MovieList() {
 
 	return (
 		<>
-			<main id="main"></main>
+			<main id="main">
+                {/* <div className="movie" dangerouslySetInnerHTML={{_html:GetMovies}}></div> */}
+            </main>
 		</>
 	)
 }
