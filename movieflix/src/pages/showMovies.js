@@ -1,14 +1,13 @@
 import React from "react"
-// import "../../App.css"
 import "./css/browse.css"
-import GetMovies from "./fetchMovieData/fetchMovies"
+import DisplayMovie from './fetchMovieData/new/fetchNew'
 function MovieList() {
-	GetMovies()
 
 	return (
 		<>
 			<main id="main">
                 {/* <div className="movie" dangerouslySetInnerHTML={{_html:GetMovies}}></div> */}
+				<DisplayMovie/>
             </main>
 		</>
 	)
