@@ -1,13 +1,11 @@
 import React from "react"
 import "./../App.css"
 // import "./css/browse.css"
-// import GetMovies from "./fetchMovieData/fetchMovies"
 import "./css/home.scss"
 import cinemaVid from "../videos/blue_cinema_screen_wide.mp4"
 
 function Home() {
-	// GetMovies()
-
+	
 	// window.onload = () => {
 	//     document.getElementById("autoplay").play()
 	// }

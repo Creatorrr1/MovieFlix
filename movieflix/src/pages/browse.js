@@ -3,11 +3,11 @@ import React from "react"
 import "./css/browse.css"
 import MovieList from "./showMovies"
 
-function Browse() {
+function Browse({query}) {
 
 	return (
 		<>
-			<MovieList />
+			<MovieList query={query}/>
 		</>
 	)
 }

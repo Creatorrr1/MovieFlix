@@ -2,16 +2,19 @@ import React from "react"
 import "../../css/browse.css"
 import { useState, useEffect } from "react"
 
-export default function DisplayMovie() {
-	const [movie, setMovie] = useState([])
-	// const {foundMovie, setFoundMovie} = useState("")
+export default function DisplayMovie({query}) {
 
-	const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
+    const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
 	const IMGPATH = "https://image.tmdb.org/t/p/w1280"
+
+    const [data, setData] = useState(APIURL)
+	const [movie, setMovie] = useState([])
+	// const [foundMovie, setFoundMovie] = useState(false)
+
 	// const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
 
 	useEffect(() => {
-		fetch(APIURL)
+		fetch(data)
 			.then((res) => res.json())
 			.then((resData) => {
 				console.log("movies raw resData not in state ->", resData.results)
@@ -19,8 +22,8 @@ export default function DisplayMovie() {
 			})
 	}, [])
 
-	function storeData(data) {
-		setMovie(data)
+	function storeData(res) {
+		setMovie(res)
 		return console.log("movies ->", movie)
 	}
 
@@ -33,6 +36,14 @@ export default function DisplayMovie() {
 			return "red"
 		}
 	}
+
+    
+    // const searchMovie = (query) => {
+    //     setData(query)
+    // }
+
+    // searchMovie(query)
+
 
 	return (
 		<>

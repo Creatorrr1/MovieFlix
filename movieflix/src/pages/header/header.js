@@ -4,36 +4,37 @@ import React from "react"
 import "../css/header.css"
 import { Link } from "react-router-dom"
 // import { useState } from 'react'
-// import GetMovies from "../fetchMovieData/fetchMovies"
-// {GetMovies, findMovie}
 
-function Header() {
+function Header({ setQuery }) {
+	const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
 
-	// const {foundMovie, setFoundMovie} = useState("")
+	const findMovie = (e) => {
+		e.preventDefault()
+		const search = document.getElementById("search")
+		const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
 
-	//  const findMovie = (e) => {
-    //  	e.preventDefault()
-    //  	const search = document.getElementById("search")
- 	//  	const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
+		const searchTerm = search.value
 
-    //  	const searchTerm = search.value
+		if (searchTerm === null || undefined || "") {
+			setQuery(APIURL)
+		}
 
-    // 	 if (searchTerm) {
-    //      	getMovies(SEARCHAPI + searchTerm)
+		if (searchTerm) {
+			setQuery(SEARCHAPI + searchTerm)
 
-    //      	search.value = ""
-    //  	}
- 	// }
+			search.value = ""
+		}
+	}
 
 	//  function getMovies(url) {
-    //     const res = fetch(url)
-    //     const resData = res.json()
-    
-    //     console.log(resData)
-    
-    //     // showMovies(resData.results)
-    //     setFoundMovie(resData.results)
-    // }
+	//     const res = fetch(url)
+	//     const resData = res.json()
+
+	//     console.log(resData)
+
+	//     // showMovies(resData.results)
+	//     setFoundMovie(resData.results)
+	// }
 
 	return (
 		<>
@@ -45,12 +46,11 @@ function Header() {
 					<Link to="/browse" className="link">
 						<div className="nav-text">Browse</div>
 					</Link>
-					<form id="form" 
-					// onSubmit={findMovie}
-					>
-						<input type="text" id="search" placeholder="Search" className="search" 
+					<form
+						id="form"
 						// onSubmit={findMovie}
-						/>
+					>
+						<input type="text" id="search" placeholder="Search" className="search" onSubmit={findMovie} />
 					</form>
 				</div>
 			</header>
