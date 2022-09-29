@@ -13,14 +13,16 @@ export default function DisplayMovie({query}) {
 
 	// const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
 
-	useEffect(() => {
-		fetch(data)
+	// useEffect(() => {
+        const getMovies = () => {
+            fetch(data)
 			.then((res) => res.json())
 			.then((resData) => {
-				console.log("movies raw resData not in state ->", resData.results)
+                console.log("movies raw resData not in state ->", resData.results)
 				storeData(resData.results)
 			})
-	}, [])
+        }
+	// }, [])
 
 	function storeData(res) {
 		setMovie(res)
@@ -36,6 +38,11 @@ export default function DisplayMovie({query}) {
 			return "red"
 		}
 	}
+
+    useEffect(() => {
+        setData(query)
+        getMovies()
+    },[query])
 
     
     // const searchMovie = (query) => {

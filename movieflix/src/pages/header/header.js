@@ -3,28 +3,44 @@ import React from "react"
 // import "../css/browse.css"
 import "../css/header.css"
 import { Link } from "react-router-dom"
-// import { useState } from 'react'
+import { useState } from 'react'
 
 function Header({ setQuery }) {
+    const [search, setSearch] = useState(false)
 	const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
 
 	const findMovie = (e) => {
 		e.preventDefault()
-		const search = document.getElementById("search")
-		const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
+        const {value} = e
 
-		const searchTerm = search.value
+        if(value !== "" || null) {
+            setSearch(true)
+        } else {
+            setQuery(APIURL)
+        }
+        // const searches = document.getElementById("search")
+        if(search) {
 
-		if (searchTerm === null || undefined || "") {
-			setQuery(APIURL)
-		}
-
-		if (searchTerm) {
-			setQuery(SEARCHAPI + searchTerm)
-
-			search.value = ""
-		}
+            const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
+            
+            const searchTerm = value
+            
+            if (searchTerm) {
+                setQuery(SEARCHAPI + searchTerm)
+                return value = "" && setSearch(false)
+            }
+        }
 	}
+
+    // const findMovie = (e) => {
+    //     e.preventDefault()
+
+    //     const {value} = e
+
+    //     if(value !== "") {
+
+    //     }
+    // }
 
 	//  function getMovies(url) {
 	//     const res = fetch(url)
