@@ -2,7 +2,7 @@ import React from "react"
 import "./../App.css"
 // import "./css/browse.css"
 import "./css/home.scss"
-// import cinemaVid from "../videos/blue_cinema_screen_wide.mp4"
+import cinemaVid from "../videos/blue_cinema_screen_wide.mp4"
 
 function Home() {
 	
@@ -13,7 +13,7 @@ function Home() {
 	return (
 		<>
 			<div className="home-container">
-				<video src="../videos/blue_cinema_screen_wide.mp4" autoPlay loop muted id="autoplay" />
+				<video src={cinemaVid} autoPlay loop muted id="autoplay" />
 				<div className="home-two-row-grid">
 					<h1 className="home-title">MovieFlix</h1>
 					{/* <div className="search-container">
