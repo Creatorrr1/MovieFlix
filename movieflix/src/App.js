@@ -8,14 +8,14 @@ import { useState } from "react"
 
 
 function App() {
-	const [query, setQuery] = useState("")
+	const [query, setQuery] = useState(null)
 
 	return (
 		<div className="App">
-			<Header query={setQuery}/>
+			<Header setQuery={setQuery} query={query}/>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/browse" element={<Browse setQuery={query}/>} />
+				<Route path="/browse" element={<Browse setQuery={setQuery} query={query}/>} />
 			</Routes>
 		</div>
 	)

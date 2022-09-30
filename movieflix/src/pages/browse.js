@@ -3,11 +3,11 @@ import React from "react"
 import "./css/browse.css"
 import MovieList from "./showMovies"
 
-function Browse({query}) {
+function Browse({setQuery, query}) {
 
 	return (
 		<>
-			<MovieList query={query}/>
+			<MovieList setQuery={setQuery} query={query}/>
 		</>
 	)
 }
