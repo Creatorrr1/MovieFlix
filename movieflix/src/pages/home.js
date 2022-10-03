@@ -2,7 +2,7 @@ import React from "react"
 import "./../App.css"
 // import "./css/browse.css"
 import "./css/home.scss"
-import cinemaVid from "../videos/blue_cinema_screen_wide.mp4"
+import cinemaVid from "../assets/videos/blue_cinema_screen_wide.mp4"
 
 function Home() {
 	
