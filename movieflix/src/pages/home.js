@@ -13,7 +13,7 @@ function Home() {
 	return (
 		<>
 			<div className="home-container">
-				<video src={cinemaVid} autoPlay loop muted id="autoplay" />
+				<video src={cinemaVid} autoPlay loop muted id="autoplay"/>
 				<div className="home-two-row-grid">
 					<h1 className="home-title">MovieFlix</h1>
 					{/* <div className="search-container">
