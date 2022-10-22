@@ -41,7 +41,7 @@ function Header({ query ,setQuery }) {
         const searchTerm = search.value
 
         if(searchTerm && search.value !== "") {
-            setQuery(SEARCHAPI+ searchTerm)
+            setQuery(SEARCHAPI + searchTerm)
             console.log("here is the after search : ", query)
             search.value = ""
         }
