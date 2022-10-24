@@ -34,13 +34,15 @@ function Header({ query ,setQuery }) {
 
     const findMovie = ("submit", (e) => {
         e.preventDefault()
+        console.log("in findMovie")
         const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
         console.log("in the find movie func")
 
         const {search} = e
-        const searchTerm = search.value
+        const searchTerm = search.target.value
+        console.log(searchTerm)
 
-        if(searchTerm && search.value !== "") {
+        if(searchTerm !== "") {
             setQuery(SEARCHAPI + searchTerm)
             console.log("here is the after search : ", query)
             search.value = ""
