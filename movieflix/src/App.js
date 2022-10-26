@@ -14,7 +14,7 @@ function App() {
 		<div className="App">
 			<Header setQuery={setQuery} query={query}/>
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={<Home setQuery={setQuery} query={query}/>} />
 				<Route path="/browse" element={<Browse setQuery={setQuery} query={query}/>} />
 			</Routes>
 		</div>
